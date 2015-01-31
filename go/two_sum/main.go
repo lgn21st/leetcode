@@ -18,12 +18,13 @@ func twoSum(numbers []int, target int) (index1 int, index2 int) {
 	hash := make(map[int]int)
 	for i, num := range numbers {
 		if j, ok := hash[target-num]; ok {
-			return j + 1, i + 1
+			index1 = j + 1
+			index2 = i + 1
 		} else {
 			hash[num] = i
 		}
 	}
-	return 0, 0
+	return index1, index2
 }
 
 func main() {
