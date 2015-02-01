@@ -7,8 +7,13 @@
  *
  * Input: numbers={2, 7, 11, 15}, target=9
  * Output: index1=1, index2=2
- *
  */
+
+#include <iostream>
+#include <vector>
+#include <map>
+
+using namespace std;
 
 class Solution {
 public:
@@ -30,3 +35,16 @@ public:
         return result;
     }
 };
+
+int main()
+{
+    Solution s1;
+    static const int arr[] = {2, 7, 11, 15};
+    vector<int> numbers (arr, arr + sizeof(arr) / sizeof(arr[0]));
+    int target = 9;
+
+    vector<int> output = s1.twoSum(numbers, target);
+    cout << output[0] << " " << output[1] << endl;
+
+    return 0;
+}
